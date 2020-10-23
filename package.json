@@ -3,15 +3,22 @@
   "version": "1.0.0",
   "description": "MERN Shopping Cart",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "start": "nodemon server.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "data:import": "node seeder.js",
+    "data:destroy": "node seeder.js -d"
   },
   "author": "Sakif Khan Pranta",
   "license": "ISC",
   "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "colors": "^1.4.0",
     "dotenv": "^8.2.0",
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "express-async-handler": "^1.1.4",
+    "mongoose": "^5.10.10"
   },
   "devDependencies": {
     "concurrently": "^5.3.0",
